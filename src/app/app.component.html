@@ -1,0 +1,37 @@
+<div class="flex-col full" showToolbar="false" z-controller="mycontroller" scrollbars="false" #zwibblerContainer zwibbler z-no-auto-init 
+
+      defaultStrokeStyle="orange" defaultTextFillStyle="orange" adaptiveBrushWidth="true" adaptiveLineWidth="true"
+      defaultLineWidth="4" defaultBrushWidth="4">
+      <div class="toolbar flex-row wrap">
+          <button z-click="stop(),ctx.usePickTool()"><i class="fas fa-mouse-pointer">PICK</i></button>
+          <button z-click="stop(), ctx.useBrushTool()"><i class="fas fa-paint-brush">BRUSH</i></button>
+          <button z-click="stop(), ctx.useTextTool()"><i class="fas fa-font">TEXT</i></button>
+          <button z-click="stop(), ctx.useCircleTool({spotHighlight:true})"><i
+                  class="fas fa-highlighter">CIRCLE</i></button>
+          <button z-click="stop(), ctx.useFreehandTool({arrowSize: 5})">
+              <img src="https://zwibbler.com/wd-arrow.png">
+          </button>
+          <button z-click="mysave()" z-if="Debug">Save</button>
+          <button z-click="myopen()" z-if="Debug">Open</button>
+      </div>
+      <div class="flex-row stretch">
+          <div class="left stretch">
+              <video #videoEle id="videoEle" controls src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"  
+                  class="full"></video>
+              <canvas class="overlay" z-class="{hidden: drawing}"></canvas>
+              <div z-canvas class=" full" z-class="{hidden: !drawing}"></div>
+          </div>
+          <div class="notes flex-col">
+              <button z-on:click="addNote()" z-if="!drawing">Add a visual note</button>
+              <button z-on:click="saveNote()" z-if="drawing">Play video</button>
+              <div z-for="note in notes" class="note" z-class="{selected:note===selectedNote}"
+                  z-on:click="gotoNote(note)">
+                  <div class="timecode" z-text="round(note.offset)"></div>
+                  <div z-editable="note.text" placeholder="Click to enter comment"></div>
+                  <div>
+                      <button z-click="deleteNote()" z-if="note===selectedNote">Delete</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
