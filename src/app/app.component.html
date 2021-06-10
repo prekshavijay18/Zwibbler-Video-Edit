@@ -2,14 +2,12 @@
 
       defaultStrokeStyle="orange" defaultTextFillStyle="orange" adaptiveBrushWidth="true" adaptiveLineWidth="true"
       defaultLineWidth="4" defaultBrushWidth="4">
-      <div class="toolbar flex-row wrap">
-          <button z-click="stop(),ctx.usePickTool()"><i class="fas fa-mouse-pointer">PICK</i></button>
-          <button z-click="stop(), ctx.useBrushTool()"><i class="fas fa-paint-brush">BRUSH</i></button>
-          <button z-click="stop(), ctx.useTextTool()"><i class="fas fa-font">TEXT</i></button>
-          <button z-click="stop(), ctx.useCircleTool({spotHighlight:true})"><i
-                  class="fas fa-highlighter">CIRCLE</i></button>
-          <button z-click="stop(), ctx.useFreehandTool({arrowSize: 5})">
-              <img src="https://zwibbler.com/wd-arrow.png">
+      <div class="toolbar flex-row ">
+          <button style="margin-right: 30px;" z-click="stop(),ctx.usePickTool()">PICK</button>
+          <button style="margin-right: 60px;" z-click="stop(), ctx.useBrushTool()">BRUSH</button>
+          <button style="margin-right: 30px;"  z-click="stop(), ctx.useTextTool()">TEXT</button>
+          <button style="margin-right: 70px;"  z-click="stop(), ctx.useCircleTool({spotHighlight:true})">CIRCLE</button>
+          <button style="margin-right: 50px;"  z-click="stop(), ctx.useFreehandTool({arrowSize: 5})">ARROW
           </button>
           <button z-click="mysave()" z-if="Debug">Save</button>
           <button z-click="myopen()" z-if="Debug">Open</button>
