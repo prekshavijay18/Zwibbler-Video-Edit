@@ -3,28 +3,16 @@
 
 ## Integrating and editing videos in Zwibbler
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+Mark, draw and write on videos in Zwibbler using TypeScript. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+
+### Adding a visual note in any position of the video and playing the video will save the changes.
+![image](https://user-images.githubusercontent.com/60219661/121508844-aeb8ee80-ca03-11eb-8d32-c294dcb6e34b.png)
+### Each note can be clicked on and edited.
+![image](https://user-images.githubusercontent.com/60219661/121509406-3b63ac80-ca04-11eb-832e-c115a12b68d2.png)
 
 ## Development server
 
+![image](https://user-images.githubusercontent.com/60219661/121508473-436f1c80-ca03-11eb-963e-c3b3a35e829e.png)
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
