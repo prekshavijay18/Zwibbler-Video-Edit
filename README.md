@@ -1,7 +1,7 @@
 
 # Integrating zwibbler with angular
 
-##Integrating and editing videos in Zwibbler
+## Integrating and editing videos in Zwibbler
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
 
